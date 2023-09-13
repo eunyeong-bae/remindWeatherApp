@@ -19,22 +19,29 @@ div{
 .weather-box{
   width: 500px;
   height: 300px;
+  justify-content: space-around;
   margin-bottom: 30px;
   border: 3px solid white;
   border-radius: 10px;
   background-color: rgb(14, 13, 13);
   opacity: 0.7;
+  padding: 20px 0;
+}
+.h-400 {
+  height: 450px;
 }
 .weather-box h3 {
   color: white;
   font-size: 30px;
   margin: 0;
-  z-index: 2;
 }
 .temperature-wrap{
   flex-direction: row;
   align-items: baseline;
   color: rgb(26, 113, 163);
+}
+.temperature-wrap h1{
+  margin: 0;
 }
 .weather-plusBtn{
   width: auto;
@@ -45,10 +52,17 @@ div{
   color: white;
   background-color: #1392e7;
 }
-.weather-box p {
+.weather-more-data{
+  border: 3px solid white;
+  color: white;
+  padding: 0 20px;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.main-weather {
   color: #133ae7;
   font-size: 25px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0;
 }
 
@@ -62,11 +76,16 @@ div{
   border: 3px solid white;
   border-radius: 10px;
 }
-.weather-button button {
+.button {
   color: white;
   background-color: black;
   padding: 5px 10px;
   border: 2px solid white;
   border-radius: 10px;
   cursor: pointer;
+}
+.selected {
+  border: 3px solid #13b6e7;
+  background-color: #133ae7;
+  color: white;
 }

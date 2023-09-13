@@ -11,7 +11,8 @@ function App() {
     lon: null
   });
   const [weatherInfo, setWeatherInfo] = useState(null);
-
+  const [currSelectedBtn, setCurrSelectedBtn] = useState('Current');
+  
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(position => {
       const data = position.coords;
@@ -40,6 +41,8 @@ function App() {
   };
 
   const handleGeographicalWeather = (cityName) => {
+    setCurrSelectedBtn(cityName);
+
     const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${cityName}&appid=${'7fda0b9c7c3c4b2693bc7c2c28417b14'}`
     cityName === 'Current' ? callCurrentWeatherInfo(location.lan, location.lon) :callApi(weatherApiUrl);
   };
@@ -47,7 +50,7 @@ function App() {
   return (
     <div className="d-flex container">
       <WeatherBox weatherInfo={weatherInfo} />
-      <WeatherButton handleGeographicalWeather={handleGeographicalWeather}/>
+      <WeatherButton handleGeographicalWeather={handleGeographicalWeather} currSelectedBtn={currSelectedBtn}/>
     </div>
   );
 }
