@@ -16,7 +16,7 @@ const WeatherBox = ({ weatherInfo}) => {
             className='weather-plusBtn'
             onClick={() => setMoreInfo(!moreInfo)}
           >
-            + 더보기
+            {moreInfo ? '닫기' :'+ 더보기'}
           </button>
         </div>
         { moreInfo &&

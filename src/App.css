@@ -48,9 +48,11 @@ div{
   height: auto;
   margin-left: 10px;
   border-radius: 5px;
-  border: 1px solid;
+  border: 2px solid;
   color: white;
   background-color: #1392e7;
+  cursor: pointer;
+  font-size: 12px;
 }
 .weather-more-data{
   border: 3px solid white;
